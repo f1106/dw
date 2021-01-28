@@ -1,0 +1,52 @@
+/* 清除默认间距 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 清除b、strong的默认样式 */
+b,strong{
+    font-weight: normal;
+}
+/* 清除i,em默认样式 */
+ i,em{
+     font-style: normal;
+ }
+ /* 清除a,u标签的默认下滑线 */
+ a,u{
+     text-decoration: none;
+ }
+ /* 清除列表默认样式符号 */
+ ul,li{
+     list-style: none;
+ }
+ /* 解决行内块元素基线对齐问题 */
+ img,input{
+     vertical-align: middle;
+ }
+ h1 {
+    font-size: 43px;
+    line-height: 52px;
+    letter-spacing: 9px;
+    margin-top: 13px;
+    text-transform: uppercase;
+    font-family: DWFutura, sans-serif;
+    font-weight: normal;
+}
+
+ h3{
+     font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: DWFutura, sans-serif;
+    font-weight: normal;
+ }
+ h5 {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 15.6px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    font-family: DWFutura, sans-serif;
+    font-weight: normal;
+}

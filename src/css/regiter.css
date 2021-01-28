@@ -1,0 +1,207 @@
+/* 黑色导航栏 */
+#head {
+    width: 100%;
+    height: 70px;
+    /* background: #040d1f; */
+    background-color: rgba(0, 14, 34, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+}
+
+#head .logo {
+    width: 120px;
+    height: 70px;
+    float: left;
+    background: url(../images/logo_03.png)center no-repeat;
+    background-size: 60px 25px;
+
+}
+
+#head ul {
+    width: 350px;
+    height: 70px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%,50%);
+    /* margin: 0 auto; */
+    margin-right: 30px;
+    /* background: #e5ae87; */
+}
+
+#head li {
+    float: left;
+    letter-spacing: 2.4px;
+    /* height: 70px; */
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    margin: 25px 3%;
+    font-size: 13px;
+
+}
+
+#head li:hover {
+    border-bottom: 1px solid #fff;
+}
+
+
+/* ******轮播图****** */
+#banner-tittle{
+    width: 100%;
+    height: 70px;
+    background: #000E22E6;
+    color: #fff;
+    line-height: 70px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 6px;
+}
+#banner{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+   
+}
+#banner .banner-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url(../images/login_banner.jpg) no-repeat;
+    background-size: cover;
+    width: 2800px;
+    height: 450px;
+    position: relative;
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: auto;
+
+}
+
+
+#banner .header {
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.08);
+    line-height: 50px;
+    top: 70px;
+}
+
+#banner .header{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 777;
+    text-align: center;
+}
+
+
+#banner ul {
+    margin: 0 auto;
+    width: 350px;
+}
+
+#banner li {
+    float: left;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 2.4px;
+    margin: 15px 3%;
+    font-size: 13px;
+}
+
+#banner li:hover {
+    border-bottom: 1px solid #fff;
+}
+
+/* *****背景图上的字****** */
+#banner .banner-con {
+    width: 1120px;
+    height: 220px;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 888;
+    /* background: palegreen */
+}
+
+#banner .banner-box {
+    width: 400px;
+    height: 220px;
+    z-index: 88888;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 0;
+    color: rgb(255, 255, 255);
+}
+#banner .banner-box h1{
+    font-size: 34px;
+}
+#banner .banner-box h5{
+    font-size: 16px;
+    letter-spacing: 3.7px;
+}
+
+/* zucebiaodan */
+#login-wrapper{
+    width: 100%;
+    height: auto;
+}
+input {
+    letter-spacing: .1rem;
+    outline: none;
+    color: #00081c!important;
+}
+#login-wrapper .box-form{
+    width: 400px;
+    /* height: 400px; */
+    margin: 70px auto;
+    /* background: palegoldenrod; */
+}
+#login-wrapper .box-form .form-item input {
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    width: 100%;
+    height: 50px;
+}
+#login-wrapper .box-form .form-item label {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 16px;
+}
+label {
+    cursor: default;
+}
+#login-wrapper .box-form .form-item select {
+    box-sizing: border-box;
+    padding-left: 20px;
+    color: #00081c;
+    letter-spacing: 1px;
+    background-color: #fff;
+    border: 0;
+    outline: 1px solid #ddd;
+    width: 100%;
+    height: 50px;
+    font-size: 13px;
+    line-height: 13px;
+}
+#login-wrapper .box-form .form-item {
+    margin-bottom: 40px;
+    width: 100%;
+    float: left;
+}

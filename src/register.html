@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/regiter.css">
+    
+</head>
+<body>
+    <div id="head">
+        <div class="logo">
+
+        </div>
+        <ul>
+            <a href="#">
+                <li>会员活动</li>
+            </a>
+            <a href="#">
+                <li>手表</li>
+            </a>
+            <a href="#">
+                <li>配饰</li>
+            </a>
+            <a href="#">
+                <li>礼品套装</li>
+            </a>
+            <a href="#">
+                <li>表带</li>
+            </a>
+        </ul>
+        
+    </div>
+    <!-- 第一个图 -->
+    <h3 id="banner-tittle"> DANIEL WELLNGTON </h3>
+    <div id="banner">
+        <div class="banner-center">
+
+        </div>
+        <div class="header">
+            <ul>
+                <a href="#">
+                    <li>会员活动</li>
+                </a>
+                <a href="#">
+                    <li>手表</li>
+                </a>
+                <a href="#">
+                    <li>配饰</li>
+                </a>
+                <a href="#">
+                    <li>礼品套装</li>
+                </a>
+                <a href="#">
+                    <li>表带</li>
+                </a>
+            </ul>
+        </div>
+        <div class="banner-con">
+            <div class="banner-box">
+                <div class="banner-topbox">
+                    <h3>独家礼遇 会员尊享</h3>
+                    <h1>悦享爱意，报以时光</h1>
+                    <h5>SHARE LOVE RETURN IN TIME </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- biaodan -->
+    <div id="login-wrapper">
+        <div class="box-form">
+            <div class="form-item">
+                <label for="username">姓名</label>
+                <input type="text" id="username" placeholder="请输入姓名" maxlength="20" />
+                <!-- <div class="error-tip">姓名仅支持中英文</div> -->
+            </div>
+            <div class="form-item">
+                    <label for="username">密码</label>
+                    <input type="text" id="username" placeholder="请输入密码">
+                </div>
+            <div class="form-item">
+                <label for="val-sex">称谓</label>
+                <select id="val-sex">
+                    <option value="M">先生</option>
+                    <option value="F">女士</option>
+                </select>
+            </div>
+            <button id="btn">zhuce</button>
+
+                
+        </div>
+        
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+        $("#btn").click(function () {
+            let http = new XMLHttpRequest()
+            http.open("get",
+                `http://127.0.0.1:8080/addUser?username=${$("#username").val()}&password=${$("#password").val()}`
+            )
+            http.send()
+            http.onreadystatechange = function () {
+                if (http.readyState === 4) {
+                    if (http.responseText === "success") {
+                        alert("注册成功，请返回登录界面")
+                        location.href = "http://127.0.0.1/DW1/index.html";
+                    } else {
+                        alert("注册失败")
+                    }
+                }
+
+            }
+        })
+    </script>
+</body>
+</html>
