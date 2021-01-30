@@ -1,3 +1,4 @@
+
 /* 黑色导航栏 */
 #head {
     width: 100%;
@@ -206,11 +207,11 @@
     width: 1120px;
     height: 220px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 70%;
+    left: 100%;
     transform: translate(-50%, -50%);
     z-index: 888;
-    /* background: palegreen */
+
 }
 
 #banner .banner-box {
@@ -225,53 +226,6 @@
     color: rgb(255, 255, 255);
 }
 
-/* .banner-box h3,
-.banner-box h1,
-.banner-box h5 {
-    text-transform: uppercase;
-    font-family: DWFutura, sans-serif;
-    font-weight: normal;
-}
-
-.banner-box h3 {
-    font-size: 21px;
-    line-height: 26px;
-    letter-spacing: 4px;
-    margin-top: 55px
-}
-
-.banner-box h1 {
-    font-size: 43px;
-    line-height: 52px;
-    letter-spacing: 9px;
-    margin-top: 13px
-}
-
-.banner-box h5 {
-    font-size: 13px;
-    line-height: 15.6px;
-    letter-spacing: 2.4px;
-    margin-top: 20px;
-} */
-
-.banner-bottombox span {
-    display: inline-block;
-    width: 200px;
-    height: 34px;
-    border: 1px solid #fff;
-    border-radius: 2px;
-    color: #fff;
-    line-height: 34px;
-    font-size: 13px;
-    text-align: center;
-    margin-top: 32px;
-}
-
-.banner-bottombox span:hover {
-    background-color: #273751;
-    border-color: #273751;
-    color: #FFFFFF;
-}
 
 /* *****第一个内容板块*** */
 #top-content {
@@ -288,20 +242,20 @@
 /* *****第一个内容板块的图***** */
 #top-pic{
     width: 100%;
-    height: 410px;
+    height: 100%;
     margin-bottom: 30px;
 }
 #top-pic .top-piccon{
     width: 1120px;
-    height: 410px;
+    height: 2520px;
     margin: 0 auto;
 }
-.top-piccon li{
+.top-piccon>li{
     width: 262px;
     height: 390px;
     margin: 0 7px;
     float: left;
-    /* margin-bottom: 30px; */
+    margin-top: 30px;
 }
 #top-pic li:hover{
     box-shadow: rgb(0 0 0 / 13%) 0px 10px 20px 0px, rgb(0 0 0 / 19%) 0px 3px 9px 0px;
@@ -320,14 +274,13 @@
     width: 250px;
     margin-left: 12px;
     color: #00081c
-    /* height: ; */
+
 }
 #word h5{
     margin-top: 13px;
 }
 
 #word button{
-    /* box-sizing: border-box; */
     margin-top: 5px;
     width: 18px;
     height: 18px;
@@ -336,15 +289,12 @@
     outline: none;
     border: 0;
     border: 1px solid rgb(0, 8, 28);
-    /* opacity: 0; */
-    /* transition: opacity 250ms ease-out 0s; */
 }
 #word .pink{
     border: 0;
 }
 #word .glory{
     background: rgb(193, 193, 193);
-    /* border: 0; */
 }
 #word .pink:hover{
     border: 1px solid rgb(0, 8, 28);
@@ -379,8 +329,8 @@
 #footpic{
     width: 100%;
     height: 230px;
-    background: url(../images/202101-cny-recommendation.jpg)center no-repeat;
-    background-size: 100% 100%
+    background: url(../images/Lumine-sp-list.jpg)center no-repeat;
+    background-size: 100% 100%;
 }
 #footpic img{
     width: 100%;

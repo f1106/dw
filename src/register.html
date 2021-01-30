@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/regiter.css">
+    <link rel="stylesheet" href="css/common.css">
     
 </head>
 <body>
@@ -34,7 +35,7 @@
         
     </div>
     <!-- 第一个图 -->
-    <h3 id="banner-tittle"> DANIEL WELLNGTON </h3>
+    <a href="http://127.0.0.1/DW1/index.html"><h3 id="banner-tittle"> DANIEL WELLNGTON </h3></a> 
     <div id="banner">
         <div class="banner-center">
 
@@ -74,47 +75,104 @@
             <div class="form-item">
                 <label for="username">姓名</label>
                 <input type="text" id="username" placeholder="请输入姓名" maxlength="20" />
-                <!-- <div class="error-tip">姓名仅支持中英文</div> -->
+                <div class="error-tip error-name">请输入正确名称</div>
             </div>
             <div class="form-item">
-                    <label for="username">密码</label>
-                    <input type="text" id="username" placeholder="请输入密码">
-                </div>
+                <label for="username">密码</label>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+            <div class="form-item">
+                <label for="tel">电话</label>
+                <input type="number" id="tel" placeholder="请输入电话号码">
+                <div class="error-tip error-tel">请输入您的手机号码</div>
+            </div>
             <div class="form-item">
                 <label for="val-sex">称谓</label>
-                <select id="val-sex">
-                    <option value="M">先生</option>
-                    <option value="F">女士</option>
+                <select id="sex">
+                    <option value="1">先生</option>
+                    <option value="0">女士</option>
                 </select>
             </div>
-            <button id="btn">zhuce</button>
-
+            <button id="btn">立即加入</button>
                 
         </div>
         
     </div>
+    <!-- 共有尾部 -->
+    <div class="dw-footer">
+        <div class="dw-footer-menu">
+            <ul>
+                <li><a href="#">使用条款</a></li>
+                <li><a href="#">隐私保护政策</a></li>
+                <li><a href="#">防伪声明</a></li>
+                <li><a href="#">网站地图</a></li>
+            </ul>
+        </div>
+        <div class="dw-footer-info">
+            <div class="copyright-list">
+                <span><img src="https://timeclub.danielwellington.cn/assets/img/icons/check.png" /></span>
+                <a href="#">粤公网安备 <i class="DW-font-book">44030502000796</i> 号</a> | <a 
+                    href="#">粤<i class="DW-font-book">ICP</i>备<i
+                        class="DW-font-book">15098750</i>号</a> | <a target="_blank"
+                    href="#">营业执照</a>
+            </div>
+            <p><i class="DW-font-book">ALL RIGHTS RESERVED. COPYRIGHT</i><em> © 丹尼尔惠灵顿贸易（深圳）有限公司</em></p>
+        </div>
+    </div>
     
-    <script src="js/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
     <script src="js/common.js"></script>
     <script>
+        // 判断姓名
+       
         $("#btn").click(function () {
+             if($("#username").val()&&$("#password").val()&&$("#tel").val()){
             let http = new XMLHttpRequest()
-            http.open("get",
-                `http://127.0.0.1:8080/addUser?username=${$("#username").val()}&password=${$("#password").val()}`
-            )
-            http.send()
-            http.onreadystatechange = function () {
-                if (http.readyState === 4) {
-                    if (http.responseText === "success") {
-                        alert("注册成功，请返回登录界面")
-                        location.href = "http://127.0.0.1/DW1/index.html";
-                    } else {
-                        alert("注册失败")
-                    }
-                }
+                        var options=$("#sex option:selected"); 
+                        http.open("get",
+                            `http://127.0.0.1:8080/addUser?username=${$("#username").val()}&password=${$("#password").val()}&tel=${$("#tel").val()}&sex=${options.val()}`
+                        )
+                        http.send()
+                        http.onreadystatechange = function () {
+                            if (http.readyState === 4) {
+                                if (http.responseText === "success") {
+                                    alert("注册成功，请返回登录界面")
+                                    location.href = "http://127.0.0.1/DW1/login.html";
+                                } else {
+                                    alert("注册失败")
+                                }
+                            }
 
-            }
+                        }
+        }
+        else{
+            alert("请输入信息")
+        }           
         })
+    
+    $("#username").blur(function(){
+        if(!/^[\u4e00-\u9fa5]{2,10}$/.test($(this).val())){
+            $(".error-name").fadeIn()
+        }
+        else{
+            $(".error-name").fadeOut()
+        }
+        // if($(this).val() === ""){
+        //     $(".error-name").html("请输入值")
+        // }
+    })
+    
+    $("#tel").blur(function(){
+        if(!/^1[538]\d{9}$/.test($(this).val())){
+            $(".error-tel").fadeIn()
+        }
+        else{
+            $(".error-tel").fadeOut()
+        }
+       
+    })
+        
+        
     </script>
 </body>
 </html>
